@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "scriptFile": "..\\bin\\o365Core.dll",
+  "entryPoint": "o365Core.AllocateVisioLicense.Run",
+  "bindings": [
+    {
+      "name": "allocatevisio",
+      "queueName": "allocatevisio",
+      "connection": "AzureWebJobsStorage",
+      "type": "queueTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

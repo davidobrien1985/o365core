@@ -1,0 +1,55 @@
+﻿{
+  "disabled": false,
+  "scriptFile": "..\\bin\\o365Core.dll",
+  "entryPoint": "o365Core.run.Run",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "geto365userlicense",
+      "queueName": "geto365userlicense",
+      "connection": "AzureWebJobsStorage",
+      "type": "queue",
+      "direction": "out"
+    },
+    {
+      "name": "deallocatee3o365",
+      "queueName": "deallocatee3o365",
+      "connection": "AzureWebJobsStorage",
+      "type": "queue",
+      "direction": "out"
+    },
+    {
+      "name": "allocatee3o365",
+      "queueName": "allocatee3o365",
+      "connection": "AzureWebJobsStorage",
+      "type": "queue",
+      "direction": "out"
+    },
+    {
+      "name": "allocatevisio",
+      "queueName": "allocatevisio",
+      "connection": "AzureWebJobsStorage",
+      "type": "queue",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "versent-o365",
+      "collectionName": "versent-slack",
+      "createIfNotExists": true,
+      "connection": "versent_slack_DocumentDB",
+      "direction": "out"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

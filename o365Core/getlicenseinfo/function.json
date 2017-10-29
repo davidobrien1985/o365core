@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "scriptFile": "..\\bin\\o365Core.dll",
+  "entryPoint": "o365Core.GetLicenseInfo.Run",
+  "bindings": [
+    {
+      "name": "geto365userlicense",
+      "queueName": "geto365userlicense",
+      "connection": "AzureWebJobsStorage",
+      "type": "queueTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}

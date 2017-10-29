@@ -1,0 +1,19 @@
+{
+  "disabled": false,
+  "scriptFile": "..\\bin\\o365Core.dll",
+  "entryPoint": "o365Core.AllocateE3License.Run",
+  "bindings": [
+    {
+      "name": "allocatee3o365",
+      "queueName": "allocatee3o365",
+      "connection": "AzureWebJobsStorage",
+      "type": "queueTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
