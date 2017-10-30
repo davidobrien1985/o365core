@@ -26,6 +26,7 @@ namespace o365Core
 
   public class run
   {
+    [FunctionName("receiveJobFromSlack")]
     public static async Task<string> Run(HttpRequestMessage req, TraceWriter log, IAsyncCollector<payload> allocatevisio, IAsyncCollector<payload> allocatee3o365, IAsyncCollector<payload> geto365userlicense, IAsyncCollector<payload> deallocatee3o365, ICollector<string> outputDocument)
     {
       log.Info($"C# HTTP trigger function processed a request. Command used={req.RequestUri}");
